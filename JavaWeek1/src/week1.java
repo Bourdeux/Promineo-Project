@@ -11,15 +11,14 @@ public class week1 {
 		char directionIAmGettingLostIn = 'W';
 		String lastKnownLocation = "Maob, UT";
 		float engineSize = 2.0f;
-		boolean canEat = debitCardBalance > jeepTopPrice; 
+		boolean debitCardBalance > jeepTopPrice
 		
 		debitCardBalance -= jeepTopPrice;
 		String price = String.format("%.2f", jeepTopPrice);
 		String balance = String.format("%.f", debitCardBalance);
 		
-		System.out.println();
-		
-		System.out.println(debitCardBalance);
+			
+		System.out.println(canEat);
 		
 				
 	
