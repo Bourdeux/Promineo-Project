@@ -2,7 +2,6 @@
 public class week1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//Rob's Jeep descriptions
 		double jeepTopPrice = 2000.00;
 		double debitCardBalance = 3000.00;
@@ -11,15 +10,15 @@ public class week1 {
 		char directionIAmGettingLostIn = 'W';
 		String lastKnownLocation = "Maob, UT";
 		float engineSize = 2.0f;
-		boolean debitCardBalance > jeepTopPrice
+		boolean talkingAboutJeep = true;
+		
 		
 		debitCardBalance -= jeepTopPrice;
-		String price = String.format("%.2f", jeepTopPrice);
-		String balance = String.format("%.f", debitCardBalance);
+		
 		
 			
-		System.out.println(canEat);
-		
+		System.out.println(talkingAboutJeep);
+		System.out.println(5 / 3); // truncation is in effect as % of 5/3 is larger than what int can hold
 				
 	
 	
