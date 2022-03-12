@@ -19,12 +19,12 @@ public class GuessingGame {
 	 
 	if (rand < guess) {
 		System.out.println("Your guess is too high.");
-	}else if (rand > guess) {
+	 }else if (rand > guess) {
 		System.out.println("Your guess is too low");
-	}else {
+	 }else {
 		System.out.println("You got it!");
 		break;
-	}
+	 }
 	}	
 		
 	//for loops
