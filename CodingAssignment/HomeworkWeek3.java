@@ -54,11 +54,11 @@ public class HomeworkWeek3 {
 		  System.out.println(sum);
 		  
 		  //Question 7
-		  String copier = repeater("walle", 3);
+		  String copier = repeater("Harley", 3);
 		  System.out.println(copier);
 		  
 		  //Question 8
-		  String doggo = fullName("Walle", "Teh");
+		  String doggo = fullName("Harley", "Teh");
 		  System.out.println(doggo);
 		  		  
 		  //Question 9
@@ -86,8 +86,8 @@ public class HomeworkWeek3 {
 		  * If element is found: print found element;
 		  * otherwise print error code.
 		  */
-		 String[] myStrings = {"Davion", "Katie", "Daniel", "Walle"};  
-		 String findElement = findElementInArray("Davion", myStrings);
+		 String[] myStrings = {"Dav", "Aya", "Bour", "Harley"};  
+		 String findElement = findElementInArray("dav", myStrings);
 		 if(findElement.equalsIgnoreCase("")) {
 			 System.out.println("404 Error.");
 		 } else 
