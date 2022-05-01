@@ -37,10 +37,10 @@ public class App {
 			Card flippedPlayer2Card = player2.flip();
 			
 			if(flippedPlayer1Card.getValue() > flippedPlayer2Card.getValue()) {
-				player1.incrementScore();
+				player1.incrementScore();				
 			} 
 			else if (flippedPlayer1Card.getValue() < flippedPlayer2Card.getValue()) {
-				player2.incrementScore();
+				player2.incrementScore();				
 			}
 			
 		}
@@ -56,7 +56,7 @@ public class App {
 		}
 		else
 			System.out.println("This is a draw game.");
-					
+						
 	}
-	
+		
 }

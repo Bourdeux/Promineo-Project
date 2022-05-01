@@ -1,6 +1,5 @@
 package WarCardGame;
 
-import java.util.*;
 
 public class Card {
 		

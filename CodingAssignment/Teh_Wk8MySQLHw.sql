@@ -12,12 +12,14 @@ group by title;
 
 -- Question Three: How much money was spent on salary for the marketing department between the years 1990 and 1992?
 select departments.dept_name as DepartmentName, sum(salary) from salaries
-inner join dept_emp on salaries.emp_no = dept_emp.emp_no
+inner join dept_emp on dept_emp.emp_no = salaries.emp_no
 inner join departments on dept_emp.dept_no = departments.dept_no
 where dept_name = 'Marketing'
 and salaries.from_date >= '1990-01-01'
 and salaries.to_date < '1993-01-01'; 
 
+select title, salary as AverageSalary from titles
+inner join salaries on titles.emp_no = salaries.emp_no;
 
 
 
