@@ -2,6 +2,8 @@ package com.promineotech.jeep.controller;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import java.math.BigDecimal;
+import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,17 +40,41 @@ class FetchJeepTest {
   @Test
   void testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied() {
     //Given: a valid model, trim and URI
-    JeepModel model = JeepModel.WRANGLER;
+    JeepModel model = JeepModel.RENEGADE;
     String trim = "Sport";
     String uri = 
         String.format("http://localhost:%d/jeeps?model=%s&trim=%s", serverPort, model, trim);
     
     //When: a connection is made to the URI
-    ResponseEntity<List<Jeep>> response = restTemplate.exchange(uri, 
-        HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+    ResponseEntity<List<Jeep>> response = 
+        restTemplate.exchange(uri,
+            HttpMethod.GET, 
+            null, 
+            new ParameterizedTypeReference<>() {});
     
     //Then: a success (OK - 200) status code is returned
     assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+    
+    // And: the actual list returned is the same as the expected list
+    List<Jeep> expected = buildExpected();
+    assertThat(expected).isEqualTo(response.getBody()); 
+  }
+
+  protected List<Jeep> buildExpected() {
+    List<Jeep> list = new LinkedList<>();    
+    
+    // @formatter:off
+    list.add(Jeep.builder()
+        .modelId(JeepModel.RENEGADE)
+        .trimLevel("Sport")
+        .numDoors(4)
+        .wheelSize(16)
+        .basePrice(new BigDecimal("22850.00"))
+        .build());
+    // @formatter:on
+    
+    
+    return list;   
   }  
 
 }
