@@ -394,13 +394,6 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     MapSqlParameterSource source = new MapSqlParameterSource();
   }
 
-  @Override
-  public Order saveOrder(Customer customer, Jeep jeep, Color color, Engine engine, Tire tire,
-      BigDecimal price) {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
 }
 
 

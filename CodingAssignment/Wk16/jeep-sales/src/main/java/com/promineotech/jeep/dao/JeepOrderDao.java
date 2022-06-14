@@ -22,7 +22,5 @@ public interface JeepOrderDao {
   Optional<Engine> fetchEngine(String engineId);
   Optional<Tire> fetchTire(String tireId);
   Order saveOrder(Customer customer, Jeep jeep, Color color, Engine engine, Tire tire,
-      BigDecimal price);
-  Order saveOrder(Customer customer, Jeep jeep, Color color, Engine engine, Tire tire,
       BigDecimal price, List<Option> options);
 }
